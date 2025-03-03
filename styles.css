@@ -1,0 +1,313 @@
+/* 
+* Vota por Juan David - Campaign Website Styles 
+* Modern light blue design
+*/
+
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --primary-light: #56b0f0;
+    --primary-dark: #2980b9;
+    --accent-color: #2ecc71;
+    --text-color: #333333;
+    --text-light: #777777;
+    --background-color: #f8fafc;
+    --white: #ffffff;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+header.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(46, 204, 113, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about {
+    padding: 8rem 0 4rem;
+}
+
+.bio-paragraphs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bio-paragraphs p {
+    flex: 1 1 300px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-box {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border-top: 3px solid var(--primary-color);
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box h3 {
+    color: var(--primary-color);
+}
+
+/* Propositions Section */
+/* Propositions Section */
+.propositions {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.propositions h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.propositions-list {
+    border: 2px solid #3498db; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    max-width: 800px;
+    margin: 0 auto; /* Center the list */
+}
+
+.prop-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd; /* Separator between items */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.prop-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.prop-item:hover {
+    background-color: #ecf0f1; /* Light gray background on hover */
+}
+
+.prop-item h3 {
+    color: #3498db; /* Light blue for headings */
+    margin-bottom: 10px;
+}
+
+.prop-item p {
+    color: #666; /* Gray text for descriptions */
+    line-height: 1.6;
+}
+
+/* Credits Section */
+.credits {
+    padding: 4rem 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .bio-paragraphs {
+        flex-direction: column;
+    }
+    
+    .skill-box, .prop-item {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero {
+        padding: 0 0.5rem;
+    }
+    
+    nav {
+        padding: 1rem;
+    }
+}
